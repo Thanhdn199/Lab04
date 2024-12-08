@@ -1,0 +1,17 @@
+Câu hỏi:
+Thay vì sử dụng Comparator để so sánh các mục trong giỏ hàng, liệu chúng ta có thể sử dụng interface Comparable và ghi đè phương thức compareTo() không? Hãy tham khảo tài liệu Java để hiểu thêm về interface này.
+
+1. Lớp nào nên triển khai interface Comparable?
+Lớp Media nên triển khai interface Comparable để đại diện cho các mục trong giỏ hàng.
+
+2. Phương thức compareTo() nên được triển khai như thế nào trong lớp này?
+Phương thức compareTo() được triển khai trong lớp Media để phản ánh thứ tự mong muốn, chi tiết cụ thể về cách triển khai có thể được tìm thấy trong tệp Media.java.
+
+3. Liệu có thể có nhiều quy tắc sắp xếp khác nhau với Comparable không?
+Không, interface Comparable chỉ cho phép một quy tắc sắp xếp duy nhất (thứ tự tự nhiên) cho các đối tượng.
+
+4. Làm thế nào để xử lý các quy tắc sắp xếp khác nhau, ví dụ như cho DVD?
+Nếu DVD cần quy tắc sắp xếp khác (ví dụ: theo tiêu đề, rồi theo chiều dài giảm dần, sau đó là chi phí), bạn có thể:
+
+Ghi đè phương thức compareTo() trong lớp Disc (hoặc lớp con của Media) để áp dụng quy tắc mới.
+Tham khảo mã thay đổi trong tệp Disc.java để xem cách triển khai cụ thể.
